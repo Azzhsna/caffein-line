@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lange="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Checkout form</title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="https://kit.fontawesome.com/59f799b75f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="payment">
+            <form method="POST">
+
+            <h1>Payment</h1>
+
+            <div class="form">
+                <div class="card space icon-relative">
+                    <label class="label">Name:</label>
+                    <input type="text" class="input" name="Name" placeholder="Costumer name">
+                    <i class="far fa-user icon"></i>
+                </div>
+                <div class="card space icon-relative">
+                    <label class="label">Email</label>
+                    <input type="text" class="input" name="email" placeholder="Costumer email">
+                    <i class="far fa-envelope icon"></i>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <h4>Payment Method</h4>
+                        <input type="radio" name="pay"
+                        id="bc1" checked class="radio">
+                        <label for="bc1"><i class="fab fa-cc-visa"></i> Visa </label>
+                        <input type="radio" name="pay" id="bc2" class="radio">
+                        <label for="bc2"><i class="fab fa-cc-paypal"></i> Paypal </label>
+                        </div>
+                </div>
+                <form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you agree to the Terms and Conditions and Privacy Policy'); return false; }">
+                    <input type="checkbox" name="checkbox" value="check" id="agree" /> I agree to the Terms and Conditions and Privacy Policy
+                </form>
+                <div class="card space icon-relative">
+                    <input type="text" class="input" name="card_number" placeholder=
+                    "Card number" data-mask= "0000 0000 0000 0000">
+                    <i class="far fa-address-card icon"></i>
+                </div>
+                <div class="card-grp space">
+                    <div class="class-item icon-relative">
+                        <label class="label">Expiry date</label>
+                        <input type="text" class="input" name="expiry_date" placeholder=
+                        "MM / YY" data-mask="00 / 00">
+                        <i class="far fa-calendar-alt icon"></i>  
+                    </div>
+                    <div class="card-item icon-relative">
+                        <label class="label">CVC:</label>
+                        <input type="text" class="input" name="cvc" placeholder="000" data-mask="000">
+                        <i class="fas fa-unlock icon"></i>
+                </div>
+            </div>
+            <div class="botton">
+                Pay
+            </div>
+        </div>
+            </form>
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</body>
+</html>
